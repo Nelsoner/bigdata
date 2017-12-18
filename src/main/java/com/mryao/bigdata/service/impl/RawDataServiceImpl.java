@@ -9,10 +9,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * @author: yaohuaiying
- * @Date: 2017/12/6 19:45
- * @Description:
- * @Version: 1.0
+ *
+ * @author Nelsoner 蒋酱酱
+ * @date 2017/12/18 13:55
+ * 描述: 爬取得到的数据
+ * @param
+ * @return
  */
 @Service
 public class RawDataServiceImpl implements IRawDaraService {

@@ -9,7 +9,15 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @SpringBootApplication
 public class BigdataApplication {
-//跨域请求
+
+	/**
+	 *
+	 * @author Nelsoner 蒋酱酱
+	 * @date 2017/12/18 13:52
+	 * 描述: 跨域请求
+	 * @param []
+	 * @return org.springframework.web.servlet.config.annotation.WebMvcConfigurer
+	 */
 	@Bean
 	public WebMvcConfigurer corsConfigurer() {
 		return new WebMvcConfigurerAdapter() {

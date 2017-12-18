@@ -15,7 +15,6 @@ import java.util.List;
 /**
  * @author: yaohuaiying
  * @Date: 2017/12/6 19:50
- * @Description: 原始数据（王健林）
  * @Version: 1.0
  */
 @Api("原始数据api")
