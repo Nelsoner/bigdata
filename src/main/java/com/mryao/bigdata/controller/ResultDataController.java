@@ -17,9 +17,9 @@ import java.util.List;
 /**
  * @author: yaohuaiying
  * @Date: 2017/12/6 20:16
- * @Description: 结果库api（黄伟）
  * @Version: 1.0
  */
+
 @Api("结果库api")
 @RestController
 @RequestMapping("/result_Data")
@@ -31,7 +31,15 @@ public class ResultDataController {
     @Autowired
     private IResultDataProvinceService resultDataProvinceService;
 
-    @ApiOperation("查询所有结果")
+    /**
+     *
+     * @author Nelsoner 蒋酱酱
+     * @date 2017/12/18 12:03
+     * 描述:获得数据库之前分析好的数据  年份
+     * @param []
+     * @return java.util.List<com.mryao.bigdata.entity.ResultDataYear>
+     */
+    @ApiOperation("之前分析好的数据-年份")
     @GetMapping("/Year")
     private List<ResultDataYear> listYear(){
         //直接调用hive
@@ -39,7 +47,15 @@ public class ResultDataController {
         return  resultDataYearService.findAll();
     }
 
-    @ApiOperation("添加所有结果")
+    /**
+     *
+     * @author Nelsoner 蒋酱酱
+     * @date 2017/12/18 12:04
+     * 描述: 通过hive分析 得出结果 存入数据库 并返回
+     * @param []
+     * @return java.util.List<com.mryao.bigdata.entity.ResultDataYear>
+     */
+    @ApiOperation("通过hive分析-年份")
     @GetMapping("/Year/add")
     private List<ResultDataYear> addYear(){
         List<ResultDataYear> list = QueryHiveUtils.getResultDataYear();
@@ -49,13 +65,29 @@ public class ResultDataController {
         return list;
     }
 
-    @ApiOperation("查询所有结果")
+    /**
+     *
+     * @author Nelsoner 蒋酱酱
+     * @date 2017/12/18 12:03
+     * 描述:获得数据库之前分析好的数据  省份
+     * @param []
+     * @return java.util.List<com.mryao.bigdata.entity.ResultDataYear>
+     */
+    @ApiOperation("之前分析好的数据-省份")
     @GetMapping("/Province")
     private List<ResultDataProvince> listProvince(){
         return  resultDataProvinceService.findAll();
     }
 
-    @ApiOperation("添加所有结果")
+    /**
+     *
+     * @author Nelsoner 蒋酱酱
+     * @date 2017/12/18 12:04
+     * 描述: 通过hive分析 得出结果 存入数据库 并返回
+     * @param []
+     * @return java.util.List<com.mryao.bigdata.entity.ResultDataYear>
+     */
+    @ApiOperation("通过hive分析-省份")
     @GetMapping("/Province/add")
     private List<ResultDataProvince> addProvince(){
         List<ResultDataProvince> list = QueryHiveUtils.getResultDataProvince();

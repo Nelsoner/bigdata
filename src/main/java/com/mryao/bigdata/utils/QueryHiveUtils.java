@@ -13,12 +13,28 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * @author Nelsoner 蒋酱酱
+ * @date 2017/12/18 11:58
+ * 描述:利用hive实现大数据分析
+ * @param
+ * @return
+ */
 public class QueryHiveUtils {
 
     private static Connection conn=JDBCToHiveUtils.getConnnection();
     private static PreparedStatement ps;
     private static ResultSet rs;
 
+    /**
+     *
+     * @author Nelsoner 蒋酱酱
+     * @date 2017/12/18 11:58
+     * 描述:根据省份分析
+     * @param []
+     * @return java.util.List<com.mryao.bigdata.entity.ResultDataProvince>
+     */
     public static List<ResultDataProvince> getResultDataProvince()
     {
         List list = new ArrayList<ResultDataProvince>();
@@ -50,6 +66,14 @@ public class QueryHiveUtils {
         return null;
     }
 
+    /**
+     *
+     * @author Nelsoner 蒋酱酱
+     * @date 2017/12/18 11:59
+     * 描述:根据年份分析数据
+     * @param []
+     * @return java.util.List<com.mryao.bigdata.entity.ResultDataYear>
+     */
     public static List<ResultDataYear> getResultDataYear()
     {
         List list = new ArrayList<ResultDataYear>();

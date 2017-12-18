@@ -4,6 +4,14 @@ import java.sql.Connection;import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+/**
+ *
+ * @author Nelsoner 蒋酱酱
+ * @date 2017/12/18 11:57
+ * 描述:spring 整合 hive
+ * @param
+ * @return
+ */
 public class JDBCToHiveUtils {
     private static String driverName ="org.apache.hive.jdbc.HiveDriver";   // 此Class 位于 hive-jdbc的jar包下
     private static String Url="jdbc:hive2://localhost:10000/default";    //填写hive的IP，之前在配置文件中配置的IP

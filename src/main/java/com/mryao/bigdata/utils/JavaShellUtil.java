@@ -9,6 +9,15 @@ import java.io.OutputStreamWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+/**
+ *
+ * @author Nelsoner 蒋酱酱
+ * @date 2017/12/18 11:56
+ * 描述: 规范调用shell命令
+ * @param
+ * @return
+ */
 public class JavaShellUtil {
     //基本路径
     private static final String basePath = "/tmp/";

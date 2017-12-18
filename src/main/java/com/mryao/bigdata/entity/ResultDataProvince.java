@@ -8,10 +8,12 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * @author: yaohuaiying
- * @Date: 2017/12/6 20:10
- * @Description: 大数据结果分析
- * @Version: 1.0
+ *
+ * @author Nelsoner 蒋酱酱
+ * @date 2017/12/18 12:07
+ * 描述: Province 结果数据
+ * @param
+ * @return
  */
 @Entity
 @Table(name ="T_RESULT_DATA_PROVINCE")

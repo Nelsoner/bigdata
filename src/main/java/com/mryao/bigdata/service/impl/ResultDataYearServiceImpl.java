@@ -9,10 +9,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 /**
- * @author: yaohuaiying
- * @Date: 2017/12/6 20:15
- * @Description:
- * @Version: 1.0
+ *
+ * @author Nelsoner 蒋酱酱
+ * @date 2017/12/18 12:08
+ * 描述: Year service
+ * @param
+ * @return
  */
 @Service
 public class ResultDataYearServiceImpl implements IResultDataYearService {

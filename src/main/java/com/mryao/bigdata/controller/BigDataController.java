@@ -20,7 +20,15 @@ import java.io.IOException;
 @RestController
 public class BigDataController {
 
-    @ApiOperation("启动大数据平台分析")
+    /**
+     *
+     * @author Nelsoner 蒋酱酱
+     * @date 2017/12/18 12:00
+     * 描述:调用爬虫脚本
+     * @param []
+     * @return void
+     */
+    @ApiOperation("调用爬虫脚本")
     @GetMapping("/start01")
     public void startBigData01() throws IOException {
         JavaShellUtil javaShellUtil = new JavaShellUtil();
