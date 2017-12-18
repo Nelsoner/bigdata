@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>爬虫管理主页</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+	  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-table.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <!-- CSS App -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/flat-blue.css">
+
+		<!-- Javascript -->
+		<script src="js/jquery.min.js"></script> 
+		<style type="text/css">
+			.myclass{
+				margin-left: 200px;
+				margin-top: 80px;
+			}
+			
+			#shit {
+			  position:fixed;
+			  top: 0;
+			  left: 0;
+			  right: 0;
+			  bottom: 0;
+			  background:rgb(3,20,40);
+			}
+			#shit span {
+			  display: inline-block;
+			  position:absolute;
+			  border-radius: 100%;
+			  transition: 100s linear;
+			}
+
+		</style>
+	</head>   
+	<body class="flat-blue" style="background:rgb(3,20,40)">
+		<div class="app-container">
+			<div class="row content-container">
+				<nav class="navbar navbar-default navbar-fixed-top navbar-top">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<button type="button" class="navbar-expand-toggle">
+                            <i class="fa fa-bars icon"></i>
+                        </button>
+							<ol class="breadcrumb navbar-breadcrumb">
+								<li>图表</li>
+								<li class="active">图表分布</li>
+							</ol>
+							<button type="button" class="navbar-right-expand-toggle pull-right visible-xs">
+                            <i class="fa fa-th icon"></i>
+                        </button>
+						</div>
+					</div>
+				</nav>
+				      <div class="side-menu sidebar-inverse">
+                <nav class="navbar navbar-default" role="navigation">
+                    
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">
+                                <div class="icon fa fa-paper-plane"></div>
+                                <div class="title">图表</div>
+                            </a>
+                            <button type="button" class="navbar-expand-toggle pull-right visible-xs">
+                                <i class="fa fa-times icon"></i>
+                            </button>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li class="active">
+                                <a href="index.html">
+                                    <span class="icon fa fa-tachometer"></span><span class="title">主页</span>
+                                </a>
+                            </li>
+                            
+                            
+                            <li>
+                                <a href="glyphicons.html">
+                                    <span class="icon fa fa-file-text-o"></span><span class="title">配置查询页面</span>
+                                </a>
+                              
+                            </li>
+                            
+                         
+                           
+                            <li>
+                                <a  href="map.html">
+                                    <span class="icon fa fa-archive"></span><span class="title">图表</span>
+                                </a>
+                                <!-- Dropdown level 1 -->
+                               
+                            </li>
+                       </ul>
+                </nav>
+            </div>
+            
+				<!-- Main Content -->
+                <div id="shit">
+				<div class="container-fluid">
+					<div class="myclass">
+						<div style="position:absolute;">
+							<div class="tile">
+								<div class="p-10">
+									<div id="map" class="main-chart" style="height: 700px;width: 1400px;)"></div>
+								</div>
+							</div>
+						</div>
+						<div class="tile" style="position:relative;top:20px;left:20px;height: 300px;width: 300px;">
+							<div class="p-10">
+								<div id="pie" class="main-chart"></div>
+							</div>
+						</div>
+						<div class="tile" style="position:relative;top:-300px;left:1070px;height: 300px;width: 350px;">
+							<div class="p-10">
+								<div id="pie_1" class="main-chart"></div>
+							</div>
+						</div>
+						<div class="tile" style="position:relative;top:-300px;left:1070px;height: 300px;width: 350px;">
+							<div class="p-10">
+								<div id="pie_2" class="main-chart"></div>
+							</div>
+						</div>
+						<div class="tile" style="position:relative;top:-600px;left:20px;height: 300px;width: 300px;">
+							<div id="pie_3"></div>
+						</div>
+					</div>
+			  </div>
+            </div>
+          </div></div>
+<script>
+var cols = ['#f5d76e','#f7ca18','#f4d03f','#ececec','#ecf0f1','#a2ded0'];
+var stars = 250;
+
+for (var i = 0; i <= stars; i++) {
+
+	var size = Math.random()*3;
+  var color = cols[parseInt(Math.random()*4)];
+
+	$('#shit').prepend('<span style=" width: ' + size + 'px; height: ' + size + 'px; top: ' + Math.random()*100 + '%; left: ' + Math.random()*100 + '%; background: ' + color + '; box-shadow: 0 0 '+ Math.random()*10 +'px' + color + ';"></span>') ;
+};
+
+setTimeout(function(){ 
+	$('#shit span').each(function(){  
+ 		$(this).css('top', Math.random()*100 + '%').css('left', Math.random()*100 + '%'); 
+  });
+}, 1);
+
+setInterval(function(){ 
+	$('#shit span').each(function(){  	
+ 		$(this).css('top', Math.random()*100 + '%').css('left', Math.random()*100 + '%'); 
+  });
+}, 100000);
+</script>
+
+        <!-- jQuery Library -->
+        <script src="js/highstock.js"></script>
+        <script src="js/map.js"></script>
+        <script src="js/exporting.js"></script>
+ 
+		<script src="js/chain111.js"></script>
+		<script src="js/dataMap.js"></script>
+		<script src="js/dataPie.js"></script>
+		<script src="js/dataZhu.js"></script>
+		<script src="js/map3.js"></script>
+	</body>
+
+</html>
