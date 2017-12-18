@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  * @author: yaohuaiying
- * @Date: 2017/12/6 19:48
+ * @Date: 2017/12/6
  * @Description:
  * @Version: 1.0
  */
